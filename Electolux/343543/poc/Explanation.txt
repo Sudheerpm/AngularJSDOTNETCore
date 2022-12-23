@@ -1,0 +1,52 @@
+Request Payload:
+
+{
+  "objectId": "Guid",
+  "rule_fields": {
+
+EVAL1 : 
+{
+   FACTS -->  { 
+                "LX_TKT_ISPTYP": "value",
+                "ServiceExecutionTeamPartyID": "value",
+                "ActivityServiceIssueCategoryID": "value",
+                "CountryText": "value"
+              }
+    
+             "LX_TKT_ISPTYP": "Response",
+} ,
+
+EVAL2 : 
+{
+    FACTS --> { 
+			"ResolutionCode_KUTText": "value",
+    			"LX_TKT_CLMSTS_KUT": "value",
+    			"ServiceIssueCategoryID": "value",
+		  }
+		  
+             "LX_TKT_CLMSTS_KUT": "Response",
+} ,
+
+
+EVAL3
+{
+    FACTS --> 
+           {
+                  "ServiceRequestUserLifeCycleStatusCodeText": "value",
+                  "ApprovalStatusCodeText": "value",
+                  "LX_TKT_SCEN_KUTText": "value"
+           }
+        
+           "ServiceRequestUserLifeCycleStatusCodeText" : "Response"
+}
+
+Below is the response that will be sent to c4c
+
+Response Payload:
+
+{
+  "objectId": "Guid from request",
+  "LX_TKT_ISPTYP": "rules evaluated value",
+  "ServiceRequestUserLifeCycleStatusCode": "rules evaluated value",
+  "LX_TKT_SCEN_KUT": "rules evaluated value"
+}

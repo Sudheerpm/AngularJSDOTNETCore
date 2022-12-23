@@ -1,0 +1,273 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "C4C SBSE Tickets Async and Sync Update API",
+		"description": "Provides services related to C4C Async and Sync usecase deployed on MongoDB Atlas App services. ",
+		"version": "v1"
+	},
+	"servers": [{
+		"url": "https://api-staging.eluxmkt.com/external/sap-integration/events/c4c/sbse/tickets/v1"
+	}],
+	"paths": {
+		"/c4c_ticket_sync_update": {
+			"post": {
+				"summary": "/c4c_ticket_sync_update - POST",
+				"operationId": "post-c4c_ticket_sync_update",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Request"
+							},
+							"example": {
+								"objectId": "string",
+								"rule_fields": {
+									"LX_TKT_ISPTYP_KUT": "string",
+									"LX_TKT_ISPTYP_KUTText": "string",
+									"ServiceExecutionTeamPartyID": "string",
+									"ActivityServiceIssueCategoryID": "string",
+									"Country": "string",
+									"CountryText": "string",
+									"ResolutionCode_KUT": "string",
+									"ResolutionCode_KUTText": "string",
+									"LX_TKT_CLMSTS_KUT": "string",
+									"ServiceIssueCategoryID": "string",
+									"ServiceRequestUserLifeCycleStatusCode": "string",
+									"ServiceRequestUserLifeCycleStatusCodeText": "string",
+									"ApprovalStatusCode": "string",
+									"ApprovalStatusCodeText": "string",
+									"LX_TKT_SCEN_KUT": "string",
+									"LX_TKT_SCEN_KUTText": "string",
+									"ServiceRequestUsedAddress": "string",
+									"LX_TCK_CF_KUT": "string",
+									"ProductID": "string",
+									"LX_TCK_LQ_KUT": "string"
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Response"
+								},
+								"example": {
+									"Id": "string",
+									"LX_TKT_ISPTYP_KUT": "string",
+									"LX_TKT_SCEN_KUT": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/c4c_ticket_events_producer": {
+            "post": {
+                "summary": "/c4c_ticket_events_producer - POST",
+                "operationId": "post-c4c_ticket_events_producer",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RequestAsync"
+                            },
+                            "example": {
+                                "specversion": "string",
+                                "type": "string",
+                                "source": "string",
+                                "id": "string",
+                                "event-type": "string",
+                                "event-type-version": "string",
+                                "event-id": "string",
+                                "data": {
+                                    "root-entity-id": "string",
+                                    "entity-id": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseAsync"
+                                },
+                                "example": {
+                                    "_id": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	},
+	"components": {
+		"schemas": {
+			"ListString": {
+				"type": "object",
+				"properties": {
+					"LX_TKT_ISPTYP_KUT": {
+						"type": "string"
+					},
+					"LX_TKT_ISPTYP_KUTText": {
+						"type": "string"
+					},
+					"ServiceExecutionTeamPartyID": {
+						"type": "string"
+					},
+					"ActivityServiceIssueCategoryID": {
+						"type": "string"
+					},
+					"Country": {
+						"type": "string"
+					},
+					"ResolutionCode_KUT": {
+						"type": "string"
+					},
+					"ResolutionCode_KUTText": {
+						"type": "string"
+					},
+					"LX_TKT_CLMSTS_KUT": {
+						"type": "string"
+					},
+					"ServiceIssueCategoryID": {
+						"type": "string"
+					},
+					"ServiceRequestUserLifeCycleStatusCode": {
+						"type": "string"
+					},
+					"ServiceRequestUserLifeCycleStatusCodeText": {
+						"type": "string"
+					},
+					"ApprovalStatusCode": {
+						"type": "string"
+					},
+					"ApprovalStatusCodeText": {
+						"type": "string"
+					},
+					"LX_TKT_SCEN_KUT": {
+						"type": "string"
+					},
+					"LX_TKT_SCEN_KUTText": {
+						"type": "string"
+					},
+					"ServiceRequestUsedAddress": {
+						"type": "string"
+					},
+					"LX_TCK_CF_KUT": {
+						"type": "string"
+					},
+					"ProductID": {
+						"type": "string"
+					},
+					"LX_TCK_LQ_KUT": {
+						"type": "string"
+					}
+				}
+			},
+			"Request": {
+				"required": [
+					"key"
+				],
+				"type": "object",
+				"properties": {
+					"objectId": {
+						"type": "string"
+					},
+					"rule_fields": {
+						"$ref": "#/components/schemas/ListString"
+					}
+				}
+			},
+			"Response": {
+				"type": "object",
+				"properties": {
+					"Id": {
+						"type": "string"
+					},
+					"LX_TKT_ISPTYP_KUT": {
+						"type": "string"
+					},
+					"LX_TKT_SCEN_KUT": {
+						"type": "string"
+					}
+				}
+			},
+			"ListStringAsync": {
+                "type": "object",
+                "properties": {
+                    "root-entity-id": {
+                        "type": "string"
+                    },
+                    "entity-id": {
+                        "type": "string"
+                    }
+                }
+            },
+			"RequestAsync": {
+                "required": ["key"],
+                "type": "object",
+                "properties": {
+                    "specversion": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "event-type": {
+                        "type": "string"
+                    },
+                    "event-type-version": {
+                        "type": "string"
+                    },
+                    "event-id": {
+                        "type": "string"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/ListStringAsync"
+                    }
+                }
+            },
+            "ResponseAsync": {
+                "type": "object",
+                "properties": {
+                    "_id": {
+                        "type": "string"
+                    }
+                }
+            },
+			"securitySchemes": {
+				"apiKeyHeader": {
+					"type": "apiKey",
+					"name": "Ocp-Apim-Subscription-Key",
+					"in": "header"
+				},
+				"apiKeyQuery": {
+					"type": "apiKey",
+					"name": "subscription-key",
+					"in": "query"
+				}
+			}
+		},
+		"security": [{
+			"apiKeyHeader": []
+		}, {
+			"apiKeyQuery": []
+		}]
+	}
+}

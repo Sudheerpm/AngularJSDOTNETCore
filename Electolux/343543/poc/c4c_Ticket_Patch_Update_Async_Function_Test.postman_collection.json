@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "aa5686aa-eaa2-4567-98c6-e8692e52b896",
+		"name": "Electrolux_Async_Function_Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://westeurope.azure.data.mongodb-api.com/app/c4c-sbs-extensions-vkoox/endpoint/c4c_ticket_events_producer_http",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"specversion\": \"1.0\",\r\n\t\t\"type\": \"/sap.c4c/Ticket.Root.Updated\",\r\n\t\t\"source\": \"/XAF/sap.c4c/000000000740295567\",\r\n\t\t\"id\": \"067c7107-3698-1edd-8595-de1016be76b6\",\r\n\t\t\"event-type\": \"Ticket.Root.Updated\",\r\n\t\t\"event-type-version\": \"v1\",\r\n\t\t\"event-id\": \"067c7107-3698-1edd-8595-fe1016be76b3\",\r\n\t\t\"event-time\": \"2022-08-09T00:15:00Z\",\r\n\t\t\"data\": {\r\n\t\t\t\"root-entity-id\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\"entity-id\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\"Changes\": [{\r\n\t\t\t\t\"node\": \"Ticket\",\r\n\t\t\t\t\"nodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"ParentNodeID\": \"\",\r\n\t\t\t\t\"Modification\": \"Updated\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": [{\r\n\t\t\t\t\t\"Fieldname\": \"ZSDK_VisitReportedDateValid\",\r\n\t\t\t\t\t\"New\": \"X\",\r\n\t\t\t\t\t\"Old\": \"\"\r\n\t\t\t\t}, {\r\n\t\t\t\t\t\"Fieldname\": \"SystemAdministrativeData/LastChangeDateTime\",\r\n\t\t\t\t\t\"New\": \"2022-08-05T11:15:36.9538380Z\",\r\n\t\t\t\t\t\"Old\": \"2022-08-05T10:15:00.7308800Z\"\r\n\t\t\t\t}]\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"ServiceRequestHistoricalVersion\",\r\n\t\t\t\t\"nodeID\": \"067C710736981EDD8595FDC9C531D6A6\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"Modification\": \"Created\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": []\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"ServiceRequestHistoricalVersion\",\r\n\t\t\t\t\"nodeID\": \"067C710736981EED8594EEE77FF4C200\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"Modification\": \"Updated\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": [{\r\n\t\t\t\t\t\"Fieldname\": \"ValidityDateTimePeriod/EndDateTime\",\r\n\t\t\t\t\t\"New\": \"2022-08-05T11:15:36.9538380Z\",\r\n\t\t\t\t\t\"Old\": \"9999-12-30T00:00:00.0000000Z\"\r\n\t\t\t\t}]\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"TextCollection.Root\",\r\n\t\t\t\t\"nodeID\": \"00163EAB6A1F1EECAC8005C49945BFB1\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"Modification\": \"Updated\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": [{\r\n\t\t\t\t\t\"Fieldname\": \"SystemAdministrativeData/LastChangeDateTime\",\r\n\t\t\t\t\t\"New\": \"2022-08-05T11:15:36.9538380Z\",\r\n\t\t\t\t\t\"Old\": \"2022-08-05T10:15:00.7308800Z\"\r\n\t\t\t\t}]\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"TextCollection.Text\",\r\n\t\t\t\t\"nodeID\": \"067C710736981EDD8595FD9DBD027686\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005C49945BFB1\",\r\n\t\t\t\t\"Modification\": \"Created\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": []\r\n\t\t\t}]\r\n\t\t}\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://westeurope.azure.data.mongodb-api.com/app/c4c-sbs-extensions-vkoox/endpoint/c4c_ticket_events_producer_http",
+					"protocol": "https",
+					"host": [
+						"westeurope",
+						"azure",
+						"data",
+						"mongodb-api",
+						"com"
+					],
+					"path": [
+						"app",
+						"c4c-sbs-extensions-vkoox",
+						"endpoint",
+						"c4c_ticket_events_producer_http"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,1004 @@
+{
+	"name": "IT Set status to Action needed on Res Code Repair Not Possible (+ W1, W2 RO)",
+	"attributes": [
+		{
+			"name": "Country/Region",
+			"type": "string"
+		},
+		{
+			"name": "Resolution Code",
+			"type": "string"
+		},
+		{
+			"name": "Claim Status (SP)",
+			"type": "string"
+		},
+		{
+			"name": "Service Category ID",
+			"type": "number"
+		},
+		{
+			"name": "Status",
+			"type": "string"
+		},
+		{
+			"name": "Approval Status",
+			"type": "string"
+		},
+		{
+			"name": "Resolution Category ID",
+			"type": "string"
+		}
+	],
+	"decisions": [
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Italy"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Vatican City"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\" \""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Norway"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Finland"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Spain"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Portugal"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Ireland"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "France"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Poland"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Czech Republic"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Slovakia"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Poland"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible: Statement request"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Czech Republic"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible: Statement request"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notEqual",
+						"value": "Approved"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notEqual",
+						"value": "In Revision"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notEqual",
+						"value": "Withdrawn"
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"type": "String",
+				"params": {
+					"Status": "Z6"
+				}
+			}
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Slovakia"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repair not possible: Statement request"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.14"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Poland"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repairable - Damage confirmed"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.15"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Slovakia"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repairable - Damage confirmed"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.15"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Czech Republic"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Repairable - Damage confirmed"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.15"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Poland"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Fault not found​"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.15"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Slovakia"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Fault not found​"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.15"
+					}
+				]
+			},
+			"event": {
+				"Status": "Z6"
+			 }
+		},
+		{
+			"conditions": {
+				"all": [
+					{
+						"fact": "Country/Region",
+						"operator": "equal",
+						"value": "Czech Republic"
+					},
+					{
+						"fact": "Resolution Code",
+						"operator": "equal",
+						"value": "Fault not found​"
+					},
+					{
+						"fact": "Claim Status (SP)",
+						"operator": "equal",
+						"value": "\"\""
+					},
+					{
+						"fact": "Service Category ID",
+						"operator": "equal",
+						"value": 1
+					},
+					{
+						"fact": "Status",
+						"operator": "equal",
+						"value": "Claim Validation"
+					},
+					{
+						"fact": "Approval Status",
+						"operator": "notIn",
+						"value": [
+							"Approved",
+							"In Revision",
+							"Withdrawn"
+						]
+					},
+					{
+						"fact": "Resolution Category ID",
+						"operator": "notEqual",
+						"value": "1.1.1.1.15"
+					}
+				]
+			},
+			"event": {
+						"Status": "Z6"
+					 }
+		}
+	]
+}

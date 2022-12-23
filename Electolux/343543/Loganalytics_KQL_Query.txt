@@ -1,0 +1,46 @@
+AtlasC4CSBSEDEVLog_CL
+| top 5 by TimeGenerated
+| mv-expand parse_json(messages_s)
+//| extend d=parse_json(messages_s)
+//| extend msg=d["message"]
+| project messages_s
+//|project substring(split(split(messages_s,',',1),'"',4),2,9)
+//| project _id_s, co_id_s,function_name_s,function_id_s,started_t,completed_t
+//| extend coputation_time = completed_t - started_t
+//| extend seconds = datetime_diff('second', completed_t, started_t)
+//| where function_name_s == "c4c_ticket_update_db"
+| where messages_s has "########## C4C-ID:06518B791F201EDD93DDF0276D78EFC2 ##########"
+//| summarize count() by function_name_s
+
+
+
+
+AtlasC4CSBSEQALog_CL
+//| top 5 by TimeGenerated
+| mv-expand parse_json(messages_s)
+//| extend d=parse_json(messages_s)
+//| extend msg=d["message"]
+| project messages_s
+//|project substring(split(split(messages_s,',',1),'"',4),2,9)
+//| project _id_s, co_id_s,function_name_s,function_id_s,started_t,completed_t
+//| extend coputation_time = completed_t - started_t
+//| extend seconds = datetime_diff('second', completed_t, started_t)
+//| where function_name_s == "c4c_ticket_update_db"
+| where messages_s has "########## C4C-ID:0298493419E81EED98865F9BEB44AB67 ##########"
+//| summarize count() by function_name_s
+
+
+
+AtlasC4CSBSEPRDLog_CL
+//| top 5 by TimeGenerated
+| mv-expand parse_json(messages_s)
+//| extend d=parse_json(messages_s)
+//| extend msg=d["message"]
+| project messages_s
+//|project substring(split(split(messages_s,',',1),'"',4),2,9)
+//| project _id_s, co_id_s,function_name_s,function_id_s,started_t,completed_t
+//| extend coputation_time = completed_t - started_t
+//| extend seconds = datetime_diff('second', completed_t, started_t)
+//| where function_name_s == "c4c_ticket_update_db"
+| where messages_s has "########## C4C-ID:02B09A5240421EED99AF7CD2353F2AA0 ##########"
+//| summarize count() by function_name_s

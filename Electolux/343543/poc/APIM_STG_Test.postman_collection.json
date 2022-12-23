@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "2922c7bf-428a-42e1-bb55-ced03296444d",
+		"name": "APIM_STG_Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "APIM_Stage_Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"specversion\": \"1.0\",\r\n\t\t\"type\": \"/sap.c4c/Ticket.Root.Updated\",\r\n\t\t\"source\": \"/XAF/sap.c4c/000000000740295567\",\r\n\t\t\"id\": \"087m7109-3698-1eff7-9395-de1036be73b6\",\r\n\t\t\"event-type\": \"Ticket.Root.Updated\",\r\n\t\t\"event-type-version\": \"v1\",\r\n\t\t\"event-id\": \"067c7107-3698-1edd-8595-fe1016be76b3\",\r\n\t\t\"event-time\": \"2022-08-09T00:15:00Z\",\r\n\t\t\"data\": {\r\n\t\t\t\"root-entity-id\": \"00163EAB6A1F3EECAC8005AC0C8EDFB1\",\r\n\t\t\t\"entity-id\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\"Changes\": [{\r\n\t\t\t\t\"node\": \"Ticket\",\r\n\t\t\t\t\"nodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"ParentNodeID\": \"\",\r\n\t\t\t\t\"Modification\": \"Updated\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": [{\r\n\t\t\t\t\t\"Fieldname\": \"ZSDK_VisitReportedDateValid\",\r\n\t\t\t\t\t\"New\": \"X\",\r\n\t\t\t\t\t\"Old\": \"\"\r\n\t\t\t\t}, {\r\n\t\t\t\t\t\"Fieldname\": \"SystemAdministrativeData/LastChangeDateTime\",\r\n\t\t\t\t\t\"New\": \"2022-08-05T11:15:36.9538380Z\",\r\n\t\t\t\t\t\"Old\": \"2022-08-05T10:15:00.7308800Z\"\r\n\t\t\t\t}]\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"ServiceRequestHistoricalVersion\",\r\n\t\t\t\t\"nodeID\": \"067C710736981EDD8595FDC9C531D6A6\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"Modification\": \"Created\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": []\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"ServiceRequestHistoricalVersion\",\r\n\t\t\t\t\"nodeID\": \"067C710736981EED8594EEE77FF4C200\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"Modification\": \"Updated\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": [{\r\n\t\t\t\t\t\"Fieldname\": \"ValidityDateTimePeriod/EndDateTime\",\r\n\t\t\t\t\t\"New\": \"2022-08-05T11:15:36.9538380Z\",\r\n\t\t\t\t\t\"Old\": \"9999-12-30T00:00:00.0000000Z\"\r\n\t\t\t\t}]\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"TextCollection.Root\",\r\n\t\t\t\t\"nodeID\": \"00163EAB6A1F1EECAC8005C49945BFB1\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005AC0C8EDFB1\",\r\n\t\t\t\t\"Modification\": \"Updated\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": [{\r\n\t\t\t\t\t\"Fieldname\": \"SystemAdministrativeData/LastChangeDateTime\",\r\n\t\t\t\t\t\"New\": \"2022-08-05T11:15:36.9538380Z\",\r\n\t\t\t\t\t\"Old\": \"2022-08-05T10:15:00.7308800Z\"\r\n\t\t\t\t}]\r\n\t\t\t}, {\r\n\t\t\t\t\"node\": \"TextCollection.Text\",\r\n\t\t\t\t\"nodeID\": \"067C710736981EDD8595FD9DBD027686\",\r\n\t\t\t\t\"ParentNodeID\": \"00163EAB6A1F1EECAC8005C49945BFB1\",\r\n\t\t\t\t\"Modification\": \"Created\",\r\n\t\t\t\t\"ChangedBy\": \"SAP_SYSTEM\",\r\n\t\t\t\t\"ChangedFields\": []\r\n\t\t\t}]\r\n\t\t}\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-staging.eluxmkt.com/external/c4c/sbse/v1/c4c_ticket_events_producer?subscription-key=1d3df0d06a684d98bbcaf28b38965545",
+					"protocol": "https",
+					"host": [
+						"api-staging",
+						"eluxmkt",
+						"com"
+					],
+					"path": [
+						"external",
+						"c4c",
+						"sbse",
+						"v1",
+						"c4c_ticket_events_producer"
+					],
+					"query": [
+						{
+							"key": "subscription-key",
+							"value": "1d3df0d06a684d98bbcaf28b38965545"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,186 @@
+
+
+exports = async function () {
+  let responeoutput = '';
+  //----- Start Rule Engibe Evaluate the Market Type from the received collected -------- //
+  const { Engine } = require('json-rules-engine')
+
+
+
+ 
+  console.log("Rulecollection instantiation");
+  const ruleCollection = await context.services
+    .get("mongodb-atlas")
+    .db("c4c")
+    .collection("RuleCollectionExtOne");
+  
+  const query = {
+    "name": "c4c_Test_rules"
+  };
+
+
+
+ 
+
+
+
+ const projection = {
+    "name": "c4c_Test_rules",
+    "attributes": 1,
+    "decisions": 1
+  };
+
+
+
+ console.log("fire and get data");
+  let data = await ruleCollection.findOne(query, projection)
+    .then(response => {
+      data = response;
+      delete data._id;
+      console.log("ruleCollection ==> " + JSON.stringify(data));
+      return data;
+    });
+
+
+
+
+   const processEngine = (inputs, decisions) => {
+        // Pass the decisions into Engine constructor
+        const engineEmp = new Engine(decisions);
+        //custom operator
+        engineEmp.addOperator('starts', (factValue, jsonValue) => {
+            let a = jsonValue;
+            a = a.replace(/'/g, '"');
+            let jsonValueArray = JSON.parse(a);
+            if (!factValue.length) return false
+            
+            for (let i = 0; i < jsonValueArray.length; i++) {
+              let check = wildcard(jsonValueArray[i], factValue)
+              if (jsonValueArray[i] == factValue || check != false) 
+              {
+                return true;
+              }
+            }
+        })
+
+        // Pass the inputs here
+        return engineEmp.run(inputs)
+            .then(results => {
+                setValue(JSON.stringify(results.events));
+                return results.events;
+            })
+    };
+
+
+
+
+ // Creating input parameter
+  let inputData = {};
+  const inputs = { "FirstArray": ["India"], "SecondArray": ["United States"]  };  
+  console.log("inputs", JSON.stringify(inputs));
+  processEngine(inputs, data.decisions);
+  
+  function setValue(output) {
+    responseoutput = output;
+    console.log('response is: ' + responseoutput);
+  }
+}
+
+
+exports = async function (request, response) {
+
+
+
+ //----- Start Rule Engibe Evaluate the Market Type from the received collected -------- //
+  const { Engine } = require('json-rules-engine')
+
+
+
+ console.log("request", JSON.stringify(request));
+  if (!request) {
+    throw new Error(`Request data not available`);
+  }
+
+
+
+ // Fetching Rule from Mongo Collection -----
+
+
+
+ console.log("Rulecollection instantiation");
+
+
+
+ const ruleCollection = await context.services
+    .get("mongodb-atlas")
+    .db("c4c")
+    .collection("RuleCollectionExtOne");
+  
+  const query = {
+    "name": "c4c_Test_rule"
+  };
+
+
+
+ const projection = {
+    "name": "c4c_Test_rule",
+    "attributes": 1,
+    "decisions": 1
+  };
+
+
+
+ console.log("fire and get data");
+  let data = await ruleCollection.findOne(query, projection)
+    .then(response => {
+      data = response;
+      delete data._id;
+      console.log("ruleCollection ==> " + JSON.stringify(data));
+      return data;
+    });
+
+
+
+ const processEngine = (inputs, decisions) => {
+    // Pass the decisions into Engine constructor
+    console.log("processEngine ==> " + JSON.stringify(decisions));
+    const engineEmp = new Engine(decisions);
+    console.log("inputs ==> " + JSON.stringify(inputs));
+    // Pass the inputs here
+    return engineEmp.run(inputs)
+      .then(results => {
+        console.log("engineEmp.run ==> " + JSON.stringify(results));
+        setValue(JSON.stringify(results));
+        return results;
+      })
+  };
+
+
+
+ // Creating input parameter
+  let inputData = {};
+  if (data && data.attributes && data.attributes.length > 0) {
+    data.attributes.map((element) => {
+      if (element.name === 'CountryText') {
+        const ServiceRequestUsedAddress = request['ServiceRequestUsedAddress'];
+        console.log("ServiceRequestUsedAddress", JSON.stringify(ServiceRequestUsedAddress));
+        inputData[element.name] = ServiceRequestUsedAddress[element.name] ? ServiceRequestUsedAddress[element.name] : '';
+      } else {
+        inputData[element.name] = request[element.name] ? request[element.name] : '';
+      }
+    //  console.log("inputData", element.name, request[element.name]);
+    });
+  }
+  //console.log("inputData", JSON.stringify(inputData));
+const inputs = { "FirstArray": ["India"], "SecondArray": ["UK"]  };  
+  // Pass the decisions property from employeesalary rule object
+  await Promise.all([
+    processEngine(inputs, data.decisions)
+  ])
+  function setValue(output) {
+    response = output;
+    console.log('response is: ' + response);
+  }
+  return response;
+}
+
